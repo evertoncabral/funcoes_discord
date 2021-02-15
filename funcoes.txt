@@ -1,0 +1,94 @@
+function calcularIMC() {
+  var nome = prompt("Informe seu nome:");
+  var altura = prompt("Informe sua altura:");
+  var peso = prompt("Informe o seu peso:");
+
+  var imc = (peso / (altura * altura)) * 10000;
+
+  var sobrepeso = imc > 25;
+
+  if (imc < 18.5) {
+    alert("OMS considera 'MAGREZA'");
+  } else if (imc >= 18.5 && imc <= 24.9) {
+    alert("OMS considera 'Na média'");
+  } else if (imc >= 25 && imc <= 29.9) {
+    alert("OMS considera 'SOBREPESO	I'");
+  } else if (imc >= 30 && imc <= 39.9) {
+    alert("OMS considera 'OBESIDADE	II'");
+  } else if (imc > 40) {
+    alert("OMS considera 'OBESIDADE GRAVE III'");
+  }
+
+  var texto = "você está " + (sobrepeso ? "com sobrepeso" : " na média");
+
+  alert(texto);
+}
+
+//calcularIMC();
+
+function tabuada() {
+  let tabuadaEmTexto = "";
+
+  let tabuada = 1;
+  while (tabuada < 11) {
+    let multiplicando = 1;
+    while (multiplicando < 11) {
+      tabuadaEmTexto +=
+        tabuada +
+        " x " +
+        multiplicando +
+        " = " +
+        tabuada * multiplicando +
+        "\n";
+      multiplicando += 1;
+    }
+
+    tabuada = tabuada + 1;
+  }
+
+  for (let tabuada = 1; tabuada < 11; tabuada++) {
+    for (let multiplicando = 1; multiplicando < 11; multiplicando++) {
+      tabuadaEmTexto +=
+        tabuada +
+        " x " +
+        multiplicando +
+        " = " +
+        tabuada * multiplicando +
+        "\n";
+    }
+  }
+
+  return tabuadaEmTexto;
+}
+
+//
+
+/*
+tava bebado qnd codifiquei isso aqui
+  */
+
+/*
+não testei
+  */
+
+/**
+ * Pergunta o signo e exibe alerta com preconceito
+ */
+function qualOPreconceitoComSeuSigno() {
+  var signo = prompt("Qual seu signo?");
+
+  switch (signo) {
+    case "libra":
+      alert("é indeciso");
+      break;
+    case "cancer":
+      alert("é dramático");
+      break;
+    default:
+      alert("não sei nada sobre");
+  }
+}
+
+//qualOPreconceitoComSeuSigno();
+
+//console.log(tabuada());
